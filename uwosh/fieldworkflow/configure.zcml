@@ -1,0 +1,12 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="uwosh.fieldworkflow">
+    
+    <subscriber
+        for="Products.ATContentTypes.interface.IATContentType
+             Products.DCWorkflow.interfaces.IAfterTransitionEvent"
+        handler=".events.after_transition_event"
+    />
+
+</configure>
